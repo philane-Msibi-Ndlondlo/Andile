@@ -8,7 +8,7 @@ namespace Andile\Domain\Core;
 
 class URI {
 
-    public function __construction() {
+    public function __construct() {
 
     }
 

@@ -12,11 +12,7 @@ class App {
 
     public $router;
 
-    public function __construction() {
-
-        $this->router = null;
-
-    }
+    public function __construct() {}
 
     /**
      * @method void register()

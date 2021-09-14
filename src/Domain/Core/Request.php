@@ -10,7 +10,7 @@ class Request {
 
     public $payload = [];
 
-    public function __construction() {
+    public function __construct() {
 
         $this->set_request_uri();
         $this->set_request_method();

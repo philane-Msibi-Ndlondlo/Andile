@@ -12,7 +12,7 @@ use Andile\Domain\Core;
 
 class Styles {
 
-    private function __construction() {}
+    private function __construct() {}
 
     /**
      * @method void set_style()

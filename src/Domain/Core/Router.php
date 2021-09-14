@@ -15,7 +15,7 @@ class Router {
 
     public $routes;
 
-    public function __construction() {
+    public function __construct() {
 
         $this->routes = null;
 
@@ -33,8 +33,6 @@ class Router {
         $this->validate_route($path, $action);
 
         $this->routes['GET'][$path] = $action;
-
-        $this->resolve();
 
     }
 
@@ -128,16 +126,22 @@ class Router {
         $request = new Request();
         $response = new Response();
 
-        $uri = $request->get_request_uri();
-        $request_method = $request->get_request_method();
+        $uri = $request->get_request_uri() ?: '/';
+        $request_method = $request->get_request_method() ?: 'GET';
 
-        if (!$this->is_route_exist($uri, $request_method)) die("ERROR: Route Doesnt not Exist");
+        if (!$this->is_route_exist($uri, $request_method)) {
+            $uri = '404';
+            $request_method = 'GET';
+        }
 
         $action = $this->routes[$request_method][$uri];
 
-        if (!empty($action))
+        if (!empty($action) || $action !== null)
             call_user_func($action, $request, $response);
         else
             die("ERROR: No Callable Action for URI");
+        exit();
     }
 }
+
+?>

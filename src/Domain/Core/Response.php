@@ -10,7 +10,7 @@ class Response {
 
     public $payload = [];
 
-    public function __construction() {
+    public function __construct() {
 
     }
 
@@ -21,7 +21,7 @@ class Response {
      * Desc: Function that displays the filename that matches the request's URI
      */
 
-    public function render(string $filename) {
+    public function render(string $filename, $data = []) {
 
         $file = ROOT_DIR."src/Views/{$filename}.html";
 
@@ -31,7 +31,27 @@ class Response {
 
         }
 
-        include $file;
+        $file_content = file_get_contents($file);
+
+        $partials = [];
+
+        if (preg_match_all("/\[ include [a-zA-Z]+ \]/i", $file_content, $partial_matches)) {
+            
+            foreach ($partial_matches[0] as $match) {
+                
+                $text = str_replace('[', '' , trim($match));
+                $text = str_replace('include ', '' , trim($text));
+                $partials[] = str_replace(']', '' , trim($text));
+            }
+        }
+
+        $template = new Template($file, $data);
+        
+        foreach ($partials as $partial) {
+            $template->set_tmp_partial($partial);
+        }
+
+        $template->show_resolved_template();
 
     }
 
