@@ -25,7 +25,7 @@ Status: Still in Development
 #### Controller
  - [ ] Create a root Controller
 
-[ ] #### Utils Module
+#### Utils Module
  - [ ] Create a Date Time Converter
  - [ ] Controller
 
