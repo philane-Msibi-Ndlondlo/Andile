@@ -1,0 +1,17 @@
+{
+    "name": "philane-msibi/andile",
+    "description": "A mini PHP framework for small and medium enteprises.",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Andile\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Philane Msibi",
+            "email": "philanemsibi14@gmail.com"
+        }
+    ],
+    "require": {}
+}
