@@ -13,7 +13,7 @@ Status: Still in Development
 
 #### Make a Templating Engine
  - [ ] Make the Layouts file functionality.
- - [ ] Make Partials functionality. E.g. Header, Footer, etc.
+ - [ x ] Make Partials functionality. E.g. Header, Footer, etc.
  - [ ] Add stylesheet template
 
 #### Models
