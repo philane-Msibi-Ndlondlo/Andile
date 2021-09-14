@@ -6,22 +6,27 @@ Status: Still in Development
 
 ### Todo:
 
-[x] Make a Templating Engine
- - [x] Make the Layouts file functionality.
- - [x] Make Partials functionality. E.g. Header, Footer, etc.
- - [x] Add stylesheet template
+[x] #### Bootstrap the framework
+ - [x] Make a root bootstap class App.
+ - [x] Make Make a Routing Module.
+ - [x] Make a Request and Response Module for Route callbacks
 
-[x] Models
- - [x] Create a root Model
- - [x] Create a Database ORM
-    - [x] Add Connection module
-    - [x] Add a SQL Builder
+[] #### Make a Templating Engine
+ - [] Make the Layouts file functionality.
+ - [] Make Partials functionality. E.g. Header, Footer, etc.
+ - [] Add stylesheet template
 
-[x] Controller
- - [x] Create a root Controller
+[] #### Models
+ - [] Create a root Model
+ - [] Create a Database ORM
+    - [] Add Connection module
+    - [] Add a SQL Builder
 
-[x] Utils Module
- - [x] Create a Date Time Converter
- - [x] Controller
+[] #### Controller
+ - [] Create a root Controller
+
+[] #### Utils Module
+ - [] Create a Date Time Converter
+ - [] Controller
 
 
