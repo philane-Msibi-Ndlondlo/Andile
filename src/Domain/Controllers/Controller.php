@@ -1,15 +1,11 @@
 <?php
 
-namespace Andile\Domain\Core;
+namespace Andile\Domain\Controllers;
 
 /**
- * Class that is the entry point of the app.
- * It registers all routes
- * And Runs the app
+ * Base Controller that include all CRUD operations.
  */
-class App {
-
-    public $router;
+class Controller {
 
     public function __construct() {}
 
@@ -20,9 +16,9 @@ class App {
      * @return void
      * Desc: Function that adds all request types
      */
-    public function register(Router $router) {
+    public function create() {
 
-        $this->router = $router;
+        print_r($_POST);
 
     }
 

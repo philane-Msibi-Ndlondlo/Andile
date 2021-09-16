@@ -2,6 +2,9 @@
 
 namespace Andile\Domain\Core;
 
+use Andile\Domain\Core\Template;
+use Andile\Utils\Template as UtilTemplate;
+
 /**
  * Class that handles Response
  */
@@ -16,22 +19,29 @@ class Response {
 
     /**
      * @method void render()
+     * @param string $filename, $data = []
      * @author Philane Msibi <philanemsibi14@gmail.com>
      * @return void
      * Desc: Function that displays the filename that matches the request's URI
+     * - Check if the file requested exists
+     * - Get the file contents
+     * - Check if main layout file exists
+     * - If it exists, replace [[ content ]] witht he file's contents
+     * - Get all partials included in the file's content
+     * - Create a Template Instance
+     * - Set partials to the template
+     * - Resolve the requested file to the user 
      */
 
     public function render(string $filename, $data = []) {
 
         $file = ROOT_DIR."src/Views/{$filename}.html";
 
-        if (!file_exists($file)) {
-
-            die("File doesnt not exist");
-
-        }
+        if (!file_exists($file)) die("File doesnt not exist");
 
         $file_content = file_get_contents($file);
+
+        if (UtilTemplate::is_main_layout_exist()) $file_content = UtilTemplate::resolve_layout_partials($file_content);
 
         $partials = [];
 

@@ -12,18 +12,20 @@ Status: Still in Development
  - [x] Make a Request and Response Module for Route callbacks
 
 #### Make a Templating Engine
- - [ ] Make the Layouts file functionality.
- - [ x ] Make Partials functionality. E.g. Header, Footer, etc.
- - [ ] Add stylesheet template
+ - [x] Make the Layouts file functionality.
+ - [x] Make Partials functionality. E.g. Header, Footer, etc.
+ - [x] Add stylesheet template
 
+
+#### Controller
+ - [ ] Create a root Controller
+ - [ ] Create a Todo Controller / Example
+ 
 #### Models
  - [ ] Create a root Model
  - [ ] Create a Database ORM
     - [ ] Add Connection module
     - [ ] Add a SQL Builder
-
-#### Controller
- - [ ] Create a root Controller
 
 #### Utils Module
  - [ ] Create a Date Time Converter

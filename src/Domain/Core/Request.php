@@ -14,6 +14,8 @@ class Request {
 
         $this->set_request_uri();
         $this->set_request_method();
+        $payload['$POST'] = $_POST;
+        $payload['$GET'] = $_GET;
     }
 
     /**
@@ -50,6 +52,9 @@ class Request {
 
             switch ($type) {
                 case 'GET':
+                    $this->payload['METHOD'] = $type;
+                    break;
+                case 'POST':
                     $this->payload['METHOD'] = $type;
                     break;
                 
