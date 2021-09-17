@@ -1,8 +1,12 @@
 <?php
 
+# PATHS
 define("ROOT_DIR", getcwd()."\\");
 define("ROOT_STYLE_PATH", "/Assets/styles/");
 define("VIEWS_PATH", getcwd()."\\src\\Views/");
 define("PARTIALS_PATH", getcwd()."\\src\\Views\\Partials\\");
 define("ROUTES_PATH", getcwd()."\\src\\Routes\\Routes.php");
-define("ROOT_LAYOUT_PATH", getcwd()."\\src\\Views\\Layouts\\main.html");
+define("ROOT_LAYOUT_PATH", getcwd()."\\src\\Views\\Layouts\\main.and");
+
+# CONSTANTS
+define("FILE_EXTENSION", ".and");

@@ -57,7 +57,7 @@ class Template {
 
         foreach ($this->partials as $partial) {
             $partial = trim($partial);
-            $partial_file = PARTIALS_PATH.$partial.".html";
+            $partial_file = PARTIALS_PATH.$partial.FILE_EXTENSION;
 
             if (!file_exists($partial_file)) continue;
 

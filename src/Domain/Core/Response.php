@@ -35,7 +35,7 @@ class Response {
 
     public function render(string $filename, $data = []) {
 
-        $file = ROOT_DIR."src/Views/{$filename}.html";
+        $file = ROOT_DIR."src/Views/{$filename}".FILE_EXTENSION;
 
         if (!file_exists($file)) die("File doesnt not exist");
 
